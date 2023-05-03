@@ -1,0 +1,242 @@
+section form {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secondheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px 0px 20px;
+    background-color: #CCC4B9;
+}
+.secondlogo {
+    object-fit: contain;
+    padding-left: 33px;
+    width: 5%;
+}
+section {
+    overflow-y: auto;
+    background-color: #D5FFD9;
+}
+
+#search-form {
+    width: 100%;
+    position: absolute;
+    background-color: #CCC4B9;
+    height: 50px;
+}
+.search-form{
+    padding-top: 64px;
+}
+
+.search {
+    width: 40%;
+    position: relative;
+    padding: 0px 0px;
+    background-color: transparent;
+     transition: transform 250ms ease-in-out;
+    margin-left: 22px;
+     line-height: 18px;
+     color: #575756;
+     margin-top: 13px;
+     border-radius: 50px;
+     border: 1px solid #575756;
+     transition: all 250ms ease-in-out;
+     backface-visibility: hidden;
+     transform-style: preserve-3d;
+}
+.search input[type="text"]{
+    background-color: transparent;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 50px;
+    height: 41px;
+    width: 100%;
+    padding: 0px 19px;
+    margin: 0px 0px;
+}
+.search input[type="submit"]{
+    background-image: url(../resources/search.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    position: absolute;
+    right: 20px;
+    border: 0px;
+    height: 23px;
+    width: 25px;
+}
+
+.search_input::placeholder {
+    color: #575756;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.search :hover :focus{
+    padding: 12px 0;
+    outline: 0;
+    border: 0px;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
+    background-position: 100% center;
+}
+
+#book-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90%;
+    padding-bottom: 150px;
+    padding-left: 20px;
+
+}
+.catalogscreen{
+    background-image: url("../resources/catalog.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -112px;
+}
+
+.book-card {
+    display: flex;
+    height: 70%;
+    width: 18%;
+    background-color: rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(25px);
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.book-card:hover {
+    background-color: rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(85px);
+}
+
+.book-card img {
+    width: 80%;
+    height: 65%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.book-card h1 {
+    display: flex;
+    height: 5%;
+    font-size: medium;
+    padding: 5px 0px;
+    max-width: 95%;
+    justify-content: center;
+    color: white;
+}
+
+.book-card a {
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    color: indigo;
+
+}
+.book-card a:hover {
+    color: white;
+}
+
+
+.book-card button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.book-card button * {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: fit-content;
+    margin: 5px;
+}
+
+.book-card button:hover {
+    background-color: indigo;
+}
+
+.book-card h2 {
+    font-size: smaller;
+    color: white;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.select-list {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.select-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 30px;
+    border: 0px;
+    background-color: white;
+    border-radius: 5px;
+    color: indigo;
+}
+
+.select-card:hover {
+    background-color: indigo;
+    color: white;
+}
+.select-card a{
+    color: inherit;
+}
+#sort-btn{
+    border-radius: 6px;
+    font-size: 16px;
+    width: 150px;
+    margin-right: 70px;
+}
+.sort-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    padding-left: 50px;
+    padding-top: 0px;
+    justify-content: space-evenly;
+}
+.sort-card select{
+    border-radius: 8px;
+    background: transparent;
+    height: 26px;
+    width: 130px;
+}
+.sort-card input{
+    border-radius: 2px;
+}

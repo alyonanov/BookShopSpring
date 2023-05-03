@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+section {
+    height: 100%;
+    font-family: Trebuchet MS, monospace;
+    color: indigo;
+}
+.firstscreen{
+    background-image: url("../resources/back.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -159px;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: indigo;
+    font-family: Trebuchet MS;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 5px 10px 20px;
+    background-color: #CCC4B9;
+}
+
+header img {
+    object-fit: contain;
+    padding-left: 33px;
+    width: 8%;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Trebuchet MS monospace;
+}
+
+header li {
+    display: flex;
+    margin: 0 20px 0 20px;
+    list-style: none;
+    font-family: Trebuchet MS, monospace;
+}
+
+header li a {
+    text-decoration: none;
+}
+
+header li a p {
+    position: absolute;
+    color: indigo;
+    font-size: medium;
+    font-weight: bolder;
+    padding: 0px 0px 0px 13px;
+    letter-spacing: 0.8px;
+
+}
+
+header li a:hover p {
+    font-size: 1.1em;
+}
+
+p.hidden {
+    position: relative;
+    opacity: 0;
+    font-size: 1.1em;
+    pointer-events: none;
+}

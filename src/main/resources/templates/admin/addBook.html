@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/cart.css"> -->
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="/static/css/cart.css" th:href="@{/css/addbook.css}" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" th:href="@{/css/main.css}" />
+    <title>Добавление товара</title>
+</head>
+
+<body>
+<header class="secondheader">
+    <img class="secondlogo" src="/resources/logo.png"  alt="">
+    <div>
+        <ul>
+            <li>
+                <a href="/">
+                    <p>Главная</p>
+                    <p class="hidden">Главная</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="/public/catalog">
+                    <p>Каталог</p>
+                    <p class="hidden">Каталог</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="/private/cart">
+                    <p>Корзина</p>
+                    <p class="hidden">Корзина</p>
+                </a>
+            </li>
+            <li sec:authorize="hasRole('ADMIN')">
+                <a href="/admin/addBook">
+                    <p>Добавить товар</p>
+                    <p class="selected">Добавить товар</p>
+                    <p class="hidden">Добавить товар</p>
+                </a>
+            </li>
+            <li sec:authorize="isAuthenticated()">
+                <a href="/auth/logout">
+                    <p>Выйти</p>
+                    <p class="hidden">Выйти</p>
+                </a>
+            </li>
+
+            <li sec:authorize="isAnonymous()">
+                <a href="/auth/login">
+                    <p>Авторизация</p>
+                    <p class="hidden">Авторизация</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="addbookscreen">
+    <div class="add">
+        <form class="add-form" method="post" th:action="@{/api/books/add}" >
+            <div class="group">
+                <input type="text" th:value="${name}" th:name="name" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Название книги</label>
+            </div>
+            <div class="group">
+                <label>Автор</label>
+                <select th:name="author" >
+                    <option th:value="1">А.И. Солженицын</option>
+                    <option th:value="2">Л.Н. Толстой</option>
+                    <option th:value="3">Н.В. Гоголь</option>
+                    <option th:value="4">Эрих Мария Ремарк</option>
+                    <option th:value="5">Эрих Фромм</option>
+                </select>
+            </div>
+            <div class="group">
+                <input type="text" th:value="${cost}" th:name="cost" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Цена</label>
+            </div>
+            <div class="group">
+                <input type="text"  th:value="${count}" th:name="count" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Количество</label>
+            </div>
+            <div class="group">
+                <input type="text" th:value="${discount}" th:name="discount" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Скидка</label>
+            </div>
+            <div class="group">
+                <input type="text" th:value="${description}" th:name="description" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Краткое описание</label>
+            </div>
+            <input class="add-button" type="submit" value="Добавить" >
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Instagram: bookwormstore</p>
+    <p>2023</p>
+    <p>Gmail: bookworm@gmail.com</p>
+</footer>
+</body>
+</html>

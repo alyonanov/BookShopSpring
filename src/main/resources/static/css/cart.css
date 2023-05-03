@@ -1,0 +1,91 @@
+section {
+    overflow-y: auto;
+}
+.secondheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px 0px 20px;
+    background-color: #CCC4B9;
+}
+.secondlogo {
+    object-fit: contain;
+    padding-left: 33px;
+    width: 5%;
+}
+.cartscreen{
+    background-image: url("../resources/catalog.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -77px;
+}
+.order-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.order-card {
+    display: flex;
+    flex-direction: row;
+    background-color: azure;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.book-icon {
+    width: 3%;
+}
+
+.author-name {
+    width: 25%;
+    padding-left: 15px;
+}
+
+.book-name {
+    width: 50%;
+}
+
+.cost {
+    width: 15%;
+}
+
+.order-card form {
+    width: 10%;
+    height: 30px;
+}
+
+.order-card input {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(75, 0, 130, 0.6);
+}
+.order-card input:hover {
+    background-color: rgba(75, 0, 130, 0.9);
+}
+
+.sell {
+    cursor: pointer;
+    width: 100%;
+    height: 5vh;
+    border: 0;
+    background-color: rgba(75, 0, 130, 0.6);
+}
+.sell:hover{
+    background-color: rgba(75, 0, 130, 0.9);
+}
+.sell value{
+    color:white;
+}

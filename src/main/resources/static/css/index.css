@@ -1,0 +1,19 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+section h1 {
+    font-size: 5em;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+section p {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
